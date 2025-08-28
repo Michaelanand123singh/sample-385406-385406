@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Site - For the Cocky User</title>
+    <meta name="description" content="The ultimate sample site for those who know what they want.">
+    <meta property="og:title" content="Sample Site - For the Cocky User">
+    <meta property="og:description" content="The ultimate sample site for those who know what they want.">
+    <meta property="og:image" content="URL_TO_YOUR_OG_IMAGE">
+    <meta property="og:url" content="URL_TO_YOUR_SITE">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#3490dc', /* Blue */
+                        'secondary': '#9561e2', /* Purple */
+                        'accent': '#f39c12', /* Orange */
+                        'neutral': '#3d4852', /* Dark Gray */
+                        'base': '#f9fafb', /* Light Gray */
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Sample Site",
+            "url": "https://www.example.com",
+            "logo": "URL_TO_YOUR_LOGO",
+            "description": "The ultimate sample site for those who know what they want.",
+            "sameAs": [
+                "https://www.facebook.com/YourPage",
+                "https://twitter.com/YourHandle",
+                "https://www.linkedin.com/company/YourCompany"
+            ]
+        }
+    </script>
+</head>
+<body class="bg-base font-sans text-neutral">
+
+    <!-- Navigation -->
+    <header>
+        <nav class="bg-white shadow-md sticky top-0 z-50" role="navigation" aria-label="Main">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <div class="flex items-center">
+                        <a class="flex-shrink-0" href="/" aria-label="Sample Site">
+                            <span class="font-semibold text-xl tracking-tight text-primary">Sample Site</span>
+                        </a>
+                        <div class="hidden md:block">
+                            <div class="ml-10 flex items-baseline space-x-4">
+                                <a href="#features" class="text-neutral hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Features</a>
+                                <a href="#about" class="text-neutral hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                                <a href="#contact" class="text-neutral hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden md:block">
+                        <a href="#" class="bg-primary hover:bg-secondary text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Get Started</a>
+                    </div>
+                    <div class="-mr-2 flex md:hidden">
+                        <button type="button" class="bg-white inline-flex items-center justify-center p-2 rounded-md text-neutral hover:text-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary" aria-controls="mobile-menu" aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                            <!-- Heroicon name: outline/menu -->
+                            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                            <!--
+                                Icon when menu is open.
+
+                                Heroicon name: outline/x
+
+                                Menu open: "block", Menu closed: "hidden"
+                            -->
+                            <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile menu, show/hide based on menu state. -->
+            <div class="md:hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a href="#features" class="text-neutral hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Features</a>
+                    <a href="#about" class="text-neutral hover:text-primary block px-3 py-2 rounded-md text-base font-medium">About</a>
+                    <a href="#contact" class="text-neutral hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+                </div>
+                <a href="#" class="bg-primary hover:bg-secondary text-white block px-3 py-2 rounded-md text-base font-medium">Get Started</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative py-24 bg-cover bg-center" style="background-image: url(https://images.unsplash.com/photo-1579353977828-2a4eab540b9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3OTYzMTZ8MHwxfHNlYXJjaHwxfHxzYW1wbGV8ZW58MXwwfHx8MTc1NjI4MzAxM3ww&ixlib=rb-4.1.0&q=80&w=1080)">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="container mx-auto text-center relative z-10">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Unleash Your Potential</h1>
+            <p class="text-lg md:text-xl text-white mb-8">This is the only sample site you'll ever need. Because you're that good.</p>
+            <a href="#" class="bg-accent hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full transition-colors">Show Me What I Already Know</a>
+            <p class="text-xs text-white mt-4">Image by <a href="https://unsplash.com/@oleg_moroz" class="underline" target="_blank" rel="noopener noreferrer">Олег Мороз</a> on Unsplash</p>
+        </div>
+    </section>
+
+    <!-- Social Proof Badges -->
+    <section class="py-8 bg-base">
+        <div class="container mx-auto flex flex-wrap justify-center items-center">
+            <img src="https://via.placeholder.com/100x50" alt="Badge 1" class="h-12 mx-4 grayscale hover:grayscale-0 transition-all">
+            <img src="https://via.placeholder.com/100x50" alt="Badge 2" class="h-12 mx-4 grayscale hover:grayscale-0 transition-all">
+            <img src="https://via.placeholder.com/100x50" alt="Badge 3" class="h-12 mx-4 grayscale hover:grayscale-0 transition-all">
+            <img src="https://via.placeholder.com/100x50" alt="Badge 4" class="h-12 mx-4 grayscale hover:grayscale-0 transition-all">
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section id="features" class="py-16 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Features That Matter (To Someone)</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1578496479914-7ef3b0193be3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3OTYzMTZ8MHwxfHNlYXJjaHwyfHxzYW1wbGV8ZW58MXwwfHx8MTc1NjI4MzAxM3ww&ixlib=rb-4.1.0&q=80&w=1080" alt="Man looking at microscope" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Cutting-Edge Research</h3>
+                        <p class="text-gray-700">Explore the deepest secrets of... something. It's probably important.</p>
+                    </div>
+                </div>
+                <!-- Feature 2 -->
+                <div class="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1556745757-8d76bdb6984b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3OTYzMTZ8MXwxfHNlYXJjaHwxfHxidXNpbmVzc3xlbnwxfDB8fHwxNzU2MjM5MTIxfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="White monitor on desk" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Seamless Integration</h3>
+                        <p class="text-gray-700">Integrates flawlessly with... your superior intellect. What else could it need?</p>
+                    </div>
+                </div>
+                <!-- Feature 3 -->
+                <div class="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1664575602276-acd073f104c1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3OTYzMTZ8MHwxfHNlYXJjaHwyfHxidXNpbmVzc3xlbnwxfDB8fHwxNzU2MjM5MTIxfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Person sitting at a table with a laptop" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Powerful Analytics</h3>
+                        <p class="text-gray-700">Analyze data like never before. Or just assume you're right. You probably are.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-16 bg-neutral text-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Benefits You Already Know</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Be More Awesome</h3>
+                    <p class="text-lg">As if you needed help. But we'll provide it anyway, because we're generous like that.</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Dominate Your Field</h3>
+                    <p class="text-lg">Crush the competition. You were going to anyway, but now you'll do it with <em>style</em>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use-Case Cards -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Use Cases (If You Need Them)</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-base rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold mb-2">Scenario 1</h3>
+                    <p class="text-gray-700">You're already a legend. Now become an even bigger one.</p>
+                </div>
+                <div class="bg-base rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold mb-2">Scenario 2</h3>
+                    <p class="text-gray-700">Prove everyone wrong. Again. </p>
+                </div>
+                <div class="bg-base rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold mb-2">Scenario 3</h3>
+                    <p class="text-gray-700">Remind yourself how awesome you are. Daily.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Slider (Static HTML) -->
+    <section class="py-16 bg-neutral text-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-8">What Others (Less Important) Are Saying</h2>
+            <div class="max-w-3xl mx-auto">
+                <div class="text-center italic text-lg mb-4">"I'm not worthy!"</div>
+                <div class="text-center">- A Humble Admirer</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <img src="https://images.unsplash.com/photo-1556740772-1a741367b93e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3OTYzMTZ8MXwxfHNlYXJjaHwxfHxidXNpbmVzc3xlbnwxfDB8fHwxNzU2MjgzMDE0fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Woman holding magnetic card" class="w-full h-64 object-cover rounded-lg">
+            </div>
+            <div class="md:w-1/2 md:pl-8">
+                <h2 class="text-3xl font-bold mb-4">About Us (Not That It Matters)</h2>
+                <p class="text-gray-700">We're just here to serve you. You're the star of the show. We get it.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-base">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3OTYzMTZ8MHwxfHNlYXJjaHwxfHxvZmZpY2V8ZW58MXwwfHx8MTc1NjI3OTY3OHww&ixlib=rb-4.1.0&q=80&w=1080" alt="Turned off laptop computer on top of brown wooden table" class="w-full h-64 object-cover rounded-lg">
+            </div>
+            <div class="md:w-1/2 md:pl-8">
+                <h2 class="text-3xl font-bold mb-4">Contact Us (If You Dare)</h2>
+                <p class="text-gray-700">If you have any questions, or just want to bask in our reflected glory, feel free to reach out.</p>
+                <form class="mt-6">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name:</label>
+                        <input type="text" id="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+                        <input type="email" id="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message:</label>
+                        <textarea id="message" rows="4" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                    </div>
+                    <button type="submit" class="bg-primary hover:bg-secondary text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Ready to Ascend Further?</h2>
+            <p class="text-lg mb-8">You know you want to.</p>
+            <a href="#" class="bg-accent hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full transition-colors">Take the Leap</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-neutral text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Sample Site. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
